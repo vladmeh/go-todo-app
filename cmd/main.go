@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/vladmeh/todo-app"
-	"github.com/vladmeh/todo-app/pkg/handler"
+	"github.com/vladmeh/go-todo-app"
+	"github.com/vladmeh/go-todo-app/pkg/handler"
 	"log"
 )
 
