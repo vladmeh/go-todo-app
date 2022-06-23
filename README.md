@@ -24,4 +24,5 @@ docker ps
 docker exec -it todo-db /bin/bash
 psql -U postgres
 \d
+\d+ table_name
 ```
