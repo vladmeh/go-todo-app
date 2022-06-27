@@ -86,5 +86,24 @@ func (h *Handler) updateItem(ctx *gin.Context) {
 }
 
 func (h *Handler) deleteItem(ctx *gin.Context) {
+	userId, err := getUserId(ctx)
+	if err != nil {
+		newErrorResponse(ctx, http.StatusInternalServerError, err.Error())
+		return
+	}
 
+	id, err := strconv.Atoi(ctx.Param("id"))
+	if err != nil {
+		newErrorResponse(ctx, http.StatusBadRequest, "invalid id param")
+		return
+	}
+
+	if err := h.services.TodoItem.Delete(userId, id); err != nil {
+		newErrorResponse(ctx, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	ctx.JSON(http.StatusOK, statusResponse{
+		Status: "ok",
+	})
 }
