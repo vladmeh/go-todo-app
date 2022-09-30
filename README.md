@@ -1,3 +1,8 @@
+## ToDo App
+
+https://www.youtube.com/playlist?list=PLbTTxxr-hMmyFAvyn7DeOgNRN8BQdjFm8
+https://github.com/zhashkevych/todo-app
+
 ### postgres
 
 ```bash
